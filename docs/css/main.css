@@ -91,6 +91,8 @@ nav {
             color: #5c095c; }
             nav .container .right-icons .social .button:hover i {
               color: #5c095c; }
+          nav .container .right-icons .social .button p {
+            padding: 0.5rem 0.5rem 0.5rem 0; }
       nav .container .right-icons .function {
         padding: 0 1rem;
         display: flex; }
@@ -137,7 +139,7 @@ nav {
                 padding: 0.5rem 1.5rem;
                 font-size: 1rem; }
               nav .container .right-icons .function .dropdown:hover .dropdown-content a:hover {
-                color: #5c095c; }
+                color: #5c095c !important; }
         nav .container .right-icons .function .search i:hover {
           cursor: pointer;
           color: #5c095c; }

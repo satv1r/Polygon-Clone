@@ -1,0 +1,14 @@
+{
+  "name": "polygon-clone",
+  "version": "1.0.0",
+  "description": "a polygon clone",
+  "main": "app.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o docs/css/ --recursive"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.13.1"
+  }
+}

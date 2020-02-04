@@ -56,7 +56,7 @@
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
   #podcasts,
   #videos,
   #esports,
@@ -76,5 +76,39 @@
   #hamburgerFeatures,
   #hamburgerReviews {
     display: inline-block;
+  }
+}
+
+@media (max-width: 600px) {
+  nav .container .navigation .links .dropdown a {
+    font-size: 0.7rem;
+  }
+
+  nav .container .navigation .links .dropdown:hover .dropdown-content {
+    a {
+      font-size: 1rem;
+    }
+    .drop-categories {
+      grid-template-columns: 1fr;
+      width: 100%;
+      grid-auto-flow: row;
+    }
+
+    .drop-all {
+      a {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  nav .container .navigation h1 {
+    font-size: 1rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  nav .mobile-nav {
+    display: flex;
   }
 }

@@ -81,12 +81,12 @@
 
 @media (max-width: 600px) {
   nav .container .navigation .links .dropdown a {
-    font-size: 0.7rem;
+    // font-size: 0.7rem;
   }
 
   nav .container .navigation .links .dropdown:hover .dropdown-content {
     a {
-      font-size: 1rem;
+      // font-size: 1rem;
     }
     .drop-categories {
       grid-template-columns: 1fr;
@@ -96,19 +96,39 @@
 
     .drop-all {
       a {
-        font-size: 1rem;
+        // font-size: 1rem;
       }
     }
   }
 
   nav .container .navigation h1 {
-    font-size: 1rem;
-    padding-right: 1.5rem;
+    // font-size: 1rem;
+    // padding-right: 1.5rem;
   }
 }
 
 @media (max-width: 500px) {
   nav .mobile-nav {
     display: flex;
+  }
+
+  nav .container .navigation {
+    margin: 0;
+    .links {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 370px) {
+  nav .mobile-nav {
+    display: flex;
+  }
+
+  nav .container .navigation {
+    margin: 0;
+    .links {
+      display: none;
+    }
   }
 }

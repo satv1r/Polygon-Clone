@@ -109,8 +109,24 @@
 
 @media (max-width: 500px) {
   nav .mobile-nav {
+    .dropdown-content {
+      .drop-categories {
+        grid-template-columns: 1fr !important;
+        grid-auto-flow: row;
+      }
+      .drop-all {
+        padding-top: 0.25rem;
+      }
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+    }
     display: flex;
   }
+
+  // nav .mobile-nav-drop {
+  //   display: block;
+  // }
 
   nav .container .navigation {
     margin: 0;

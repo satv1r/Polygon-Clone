@@ -4,6 +4,7 @@
   box-sizing: border-box; }
 
 body {
+  overflow-x: hidden;
   font-family: Arial, Helvetica, sans-serif;
   color: #f8f8f8; }
 
@@ -191,12 +192,12 @@ nav {
       display: inline-block;
       position: relative; }
       nav .mobile-nav .dropdown .dropdown-content {
-        padding: 0.25rem 0.4rem;
+        padding: 0.25rem 0;
         display: none;
-        position: absolute;
+        position: fixed;
         z-index: 1; }
         nav .mobile-nav .dropdown .dropdown-content a {
-          padding: 0.5rem 1rem;
+          padding: 1rem 1rem;
           font-size: 1rem; }
       nav .mobile-nav .dropdown:hover {
         background: darkmagenta; }
@@ -218,6 +219,18 @@ nav {
             font-size: 1.1rem; }
           nav .mobile-nav .dropdown:hover .dropdown-content a:hover {
             color: #5c095c; }
+  nav .mobile-nav-drop {
+    display: none;
+    background: darkmagenta; }
+    nav .mobile-nav-drop .dropdown-content-gaming {
+      height: 100vh; }
+      nav .mobile-nav-drop .dropdown-content-gaming .drop-categories {
+        display: flex;
+        flex-direction: column; }
+        nav .mobile-nav-drop .dropdown-content-gaming .drop-categories a {
+          color: white;
+          text-decoration: none;
+          padding: 1rem 1rem 0.5rem 1rem; }
 
 footer {
   background: darkslategray;
@@ -302,6 +315,15 @@ footer {
 @media (max-width: 500px) {
   nav .mobile-nav {
     display: flex; }
+    nav .mobile-nav .dropdown-content {
+      left: 0;
+      width: 100vw;
+      height: 100vh; }
+      nav .mobile-nav .dropdown-content .drop-categories {
+        grid-template-columns: 1fr !important;
+        grid-auto-flow: row; }
+      nav .mobile-nav .dropdown-content .drop-all {
+        padding-top: 0.25rem; }
   nav .container .navigation {
     margin: 0; }
     nav .container .navigation .links {

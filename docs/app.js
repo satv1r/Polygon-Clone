@@ -1,9 +1,11 @@
 const searchIcon = document.getElementById("searchIcon");
 const searchBar = document.getElementById("searchBar");
 const searchText = document.getElementById("searchText");
-
 const header = document.getElementById("header");
 
+const mGaming = document.getElementById("mGaming");
+const mEntertainment = document.getElementById("mEntertainment");
+const more = document.getElementById("more");
 header.addEventListener("click", e => {
   searchIcon.style.color = "";
   searchBar.style.display = "none";

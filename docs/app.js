@@ -2,10 +2,58 @@ const searchIcon = document.getElementById("searchIcon");
 const searchBar = document.getElementById("searchBar");
 const searchText = document.getElementById("searchText");
 const header = document.getElementById("header");
+const body = document.querySelector("body");
 
-const mGaming = document.getElementById("mGaming");
-const mEntertainment = document.getElementById("mEntertainment");
-const more = document.getElementById("more");
+const gaming = document.getElementById("mGaming");
+const gamingDC = document.getElementById("gamingDC");
+const entertainment = document.getElementById("mEntertainment");
+const entertainmentDC = document.getElementById("entertainmentDC");
+const more = document.getElementById("mMore");
+const moreDC = document.getElementById("moreDC");
+
+gamingDC.style.display = "none";
+entertainmentDC.style.display = "none";
+moreDC.style.display = "none";
+
+gaming.addEventListener("click", e => {
+  if (gamingDC.style.display === "none") {
+    moreDC.style.display = "none";
+    entertainmentDC.style.display = "none";
+    gamingDC.style.display = "block";
+    body.style.overflow = "hidden";
+  } else {
+    gamingDC.style.display = "none";
+    body.style.overflow = "visible";
+  }
+  e.preventDefault();
+});
+
+entertainment.addEventListener("click", e => {
+  if (entertainmentDC.style.display === "none") {
+    moreDC.style.display = "none";
+    gamingDC.style.display = "none";
+    entertainmentDC.style.display = "block";
+    body.style.overflow = "hidden";
+  } else {
+    entertainmentDC.style.display = "none";
+    body.style.overflow = "visible";
+  }
+  e.preventDefault();
+});
+
+more.addEventListener("click", e => {
+  if (moreDC.style.display === "none") {
+    entertainmentDC.style.display = "none";
+    gamingDC.style.display = "none";
+    moreDC.style.display = "block";
+    body.style.overflow = "hidden";
+  } else {
+    moreDC.style.display = "none";
+    body.style.overflow = "visible";
+  }
+  e.preventDefault();
+});
+
 header.addEventListener("click", e => {
   searchIcon.style.color = "";
   searchBar.style.display = "none";

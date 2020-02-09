@@ -250,42 +250,31 @@ nav {
         display: none;
         position: fixed;
         z-index: 1;
+        background: $main-dark;
+
+        .drop-categories {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-auto-flow: row;
+
+          a {
+            white-space: nowrap;
+          }
+        }
 
         a {
+          white-space: nowrap;
           padding: 1rem 1rem;
           font-size: 1rem;
-        }
-      }
-      &:hover {
-        background: $main-dark;
-        .caret {
-          color: $accent-dark;
-        }
-        .dropdown-content {
-          display: block;
-          background: $main-dark;
 
-          .drop-categories {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-auto-flow: row;
-
-            a {
-              white-space: nowrap;
-            }
-          }
-
-          .drop-all {
-            hr {
-              margin: 0.25rem 1rem;
-            }
-            a {
-              white-space: nowrap;
-              font-size: 1.1rem;
-            }
-          }
-          a:hover {
+          &:hover {
             color: $accent-dark;
+          }
+        }
+
+        .drop-all {
+          hr {
+            margin: 0.25rem 1rem;
           }
         }
       }

@@ -32,6 +32,9 @@
   #hamburgerGuides {
     display: inline-block;
   }
+  nav .searchBar .wrapper input {
+    width: 500px;
+  }
 }
 
 @media (max-width: 850px) {

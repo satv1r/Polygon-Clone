@@ -259,7 +259,9 @@ footer {
   #hamburgerEsports,
   #hamburgerShopping,
   #hamburgerGuides {
-    display: inline-block; } }
+    display: inline-block; }
+  nav .searchBar .wrapper input {
+    width: 500px; } }
 
 @media (max-width: 850px) {
   #podcasts,

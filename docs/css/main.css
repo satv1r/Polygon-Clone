@@ -374,7 +374,28 @@ footer {
       grid-template-rows: minmax(0, 1.5fr) minmax(0, 1fr) minmax(0, 1.5fr) minmax(0, 1fr);
       grid-template-areas: "main main main" "single1 single2 secondary1" "secondary2 secondary2 secondary2" "single3 single4 single5"; }
       header .grid #card2 {
-        display: flex; } }
+        display: flex;
+        flex-direction: column; }
+        header .grid #card2 .image {
+          position: relative;
+          height: 100%; }
+          header .grid #card2 .image img {
+            width: 100%;
+            max-height: 100%;
+            object-fit: cover; }
+        header .grid #card2 .text {
+          flex-basis: 0%;
+          position: relative;
+          flex-basis: contents;
+          height: 100%; }
+          header .grid #card2 .text .category {
+            position: absolute;
+            top: -1rem; }
+          header .grid #card2 .text .card-title-l {
+            font-size: 1.25rem;
+            text-transform: initial;
+            color: black;
+            margin-bottom: 0.5rem; } }
 
 @media (max-width: 850px) {
   #podcasts,

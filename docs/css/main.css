@@ -236,137 +236,58 @@ header {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
     grid-template-areas: "main main main single1" "single2 secondary1 secondary1 single3" "secondary2 secondary2 single4 single5"; }
-    header .grid .main,
-    header .grid .secondary1,
-    header .grid .secondary2 {
+    header .grid .fullCard {
       position: relative;
       max-height: 100%;
       max-width: 100%; }
-      header .grid .main img,
-      header .grid .secondary1 img,
-      header .grid .secondary2 img {
-        position: absolute;
-        z-index: 0;
-        width: 100%;
-        max-height: 100%;
-        object-fit: cover;
-        filter: brightness(50%); }
-      header .grid .main .text,
-      header .grid .secondary1 .text,
-      header .grid .secondary2 .text {
+      header .grid .fullCard .image {
+        height: 100%;
+        position: relative; }
+        header .grid .fullCard .image img {
+          position: absolute;
+          z-index: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          filter: brightness(50%); }
+      header .grid .fullCard .text {
         position: absolute;
         z-index: 1;
         bottom: 0; }
-    header .grid .main {
-      grid-area: main;
-      max-height: 100%; }
-      header .grid .main .image {
-        height: 100%;
-        position: relative; }
-        header .grid .main .image img {
-          height: 100%;
+    header .grid .halfCard {
+      display: flex;
+      flex-direction: column; }
+      header .grid .halfCard .image {
+        position: relative;
+        height: 100%; }
+        header .grid .halfCard .image img {
           width: 100%;
+          max-height: 100%;
           object-fit: cover; }
-    header .grid .secondary1 {
+      header .grid .halfCard .text {
+        flex-basis: 0%;
+        position: relative;
+        flex-basis: contents;
+        height: 100%; }
+        header .grid .halfCard .text .category {
+          position: absolute;
+          top: -1rem; }
+    header .grid #card1 {
+      grid-area: main; }
+    header .grid #card2 {
       grid-area: secondary1; }
-    header .grid .secondary2 {
+    header .grid #card3 {
       grid-area: secondary2; }
-    header .grid .single1 {
-      grid-area: single1;
-      display: flex;
-      flex-direction: column; }
-      header .grid .single1 .image {
-        position: relative;
-        height: 100%; }
-        header .grid .single1 .image img {
-          width: 100%;
-          max-height: 100%;
-          object-fit: cover; }
-      header .grid .single1 .text {
-        flex-basis: 0%;
-        position: relative;
-        flex-basis: contents;
-        height: 100%; }
-        header .grid .single1 .text .category {
-          position: absolute;
-          top: -1rem; }
-    header .grid .single2 {
-      grid-area: single2;
-      display: flex;
-      flex-direction: column; }
-      header .grid .single2 .image {
-        flex-basis: 1;
-        position: relative;
-        height: 100%; }
-        header .grid .single2 .image img {
-          width: 100%;
-          max-height: 100%;
-          object-fit: cover; }
-      header .grid .single2 .text {
-        flex-basis: 0;
-        position: relative;
-        flex-basis: 1;
-        height: 100%; }
-        header .grid .single2 .text .category {
-          position: absolute;
-          top: -1rem; }
-    header .grid .single3 {
-      grid-area: single3;
-      display: flex;
-      flex-direction: column; }
-      header .grid .single3 .image {
-        position: relative;
-        height: 100%; }
-        header .grid .single3 .image img {
-          width: 100%;
-          max-height: 100%;
-          object-fit: cover; }
-      header .grid .single3 .text {
-        flex-basis: 0%;
-        position: relative;
-        flex-basis: contents;
-        height: 100%; }
-        header .grid .single3 .text .category {
-          position: absolute;
-          top: -1rem; }
-    header .grid .single4 {
-      grid-area: single4;
-      display: flex;
-      flex-direction: column; }
-      header .grid .single4 .image {
-        position: relative;
-        height: 100%; }
-        header .grid .single4 .image img {
-          width: 100%;
-          max-height: 100%;
-          object-fit: cover; }
-      header .grid .single4 .text {
-        flex-basis: 0%;
-        position: relative;
-        flex-basis: contents;
-        height: 100%; }
-        header .grid .single4 .text .category {
-          position: absolute;
-          top: -1rem; }
-    header .grid .single5 {
-      grid-area: single5;
-      display: flex;
-      flex-direction: column; }
-      header .grid .single5 .image {
-        position: relative;
-        height: 100%; }
-        header .grid .single5 .image img {
-          width: 100%;
-          max-height: 100%;
-          object-fit: cover; }
-      header .grid .single5 .text {
-        flex-basis: 0%;
-        position: relative;
-        flex-basis: contents;
-        height: 100%; }
-        header .grid .single5 .text .category {
-          position: absolute;
-          top: -1rem; }
+    header .grid #card4 {
+      grid-area: single1; }
+    header .grid #card5 {
+      grid-area: single2; }
+    header .grid #card6 {
+      grid-area: single3; }
+    header .grid #card7 {
+      grid-area: single4; }
+    header .grid #card8 {
+      grid-area: single5; }
 
 .category {
   font-size: 0.75rem;
@@ -443,7 +364,17 @@ footer {
   #hamburgerGuides {
     display: inline-block; }
   nav .searchBar .wrapper input {
-    width: 500px; } }
+    width: 500px; }
+  header {
+    height: 200vh;
+    width: 100%; }
+    header .grid {
+      padding: 1rem 0;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: minmax(0, 1.5fr) minmax(0, 1fr) minmax(0, 1.5fr) minmax(0, 1fr);
+      grid-template-areas: "main main main" "single1 single2 secondary1" "secondary2 secondary2 secondary2" "single3 single4 single5"; }
+      header .grid #card2 {
+        display: flex; } }
 
 @media (max-width: 850px) {
   #podcasts,

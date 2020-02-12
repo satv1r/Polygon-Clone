@@ -35,6 +35,29 @@
   nav .searchBar .wrapper input {
     width: 500px;
   }
+
+  header {
+    height: 200vh;
+    width: 100%;
+
+    .grid {
+      padding: 1rem 0;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: minmax(0, 1.5fr) minmax(0, 1fr) minmax(0, 1.5fr) minmax(
+          0,
+          1fr
+        );
+      grid-template-areas:
+        "main main main"
+        "single1 single2 secondary1"
+        "secondary2 secondary2 secondary2"
+        "single3 single4 single5";
+
+      #card2 {
+        display: flex;
+      }
+    }
+  }
 }
 
 @media (max-width: 850px) {

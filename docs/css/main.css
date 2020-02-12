@@ -224,6 +224,188 @@ nav {
           text-decoration: none;
           padding: 1rem 1rem 0.5rem 1rem; }
 
+header {
+  height: 100vh;
+  width: 100%; }
+  header .grid {
+    padding: 1rem 0;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-gap: 0.25rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-areas: "main main main single1" "single2 secondary1 secondary1 single3" "secondary2 secondary2 single4 single5"; }
+    header .grid .main,
+    header .grid .secondary1,
+    header .grid .secondary2 {
+      position: relative;
+      max-height: 100%;
+      max-width: 100%; }
+      header .grid .main img,
+      header .grid .secondary1 img,
+      header .grid .secondary2 img {
+        position: absolute;
+        z-index: 0;
+        width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        filter: brightness(50%); }
+      header .grid .main .text,
+      header .grid .secondary1 .text,
+      header .grid .secondary2 .text {
+        position: absolute;
+        z-index: 1;
+        bottom: 0; }
+    header .grid .main {
+      grid-area: main;
+      max-height: 100%; }
+      header .grid .main .image {
+        height: 100%;
+        position: relative; }
+        header .grid .main .image img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover; }
+    header .grid .secondary1 {
+      grid-area: secondary1; }
+    header .grid .secondary2 {
+      grid-area: secondary2; }
+    header .grid .single1 {
+      grid-area: single1;
+      display: flex;
+      flex-direction: column; }
+      header .grid .single1 .image {
+        position: relative;
+        height: 100%; }
+        header .grid .single1 .image img {
+          width: 100%;
+          max-height: 100%;
+          object-fit: cover; }
+      header .grid .single1 .text {
+        flex-basis: 0%;
+        position: relative;
+        flex-basis: contents;
+        height: 100%; }
+        header .grid .single1 .text .category {
+          position: absolute;
+          top: -1rem; }
+    header .grid .single2 {
+      grid-area: single2;
+      display: flex;
+      flex-direction: column; }
+      header .grid .single2 .image {
+        flex-basis: 1;
+        position: relative;
+        height: 100%; }
+        header .grid .single2 .image img {
+          width: 100%;
+          max-height: 100%;
+          object-fit: cover; }
+      header .grid .single2 .text {
+        flex-basis: 0;
+        position: relative;
+        flex-basis: 1;
+        height: 100%; }
+        header .grid .single2 .text .category {
+          position: absolute;
+          top: -1rem; }
+    header .grid .single3 {
+      grid-area: single3;
+      display: flex;
+      flex-direction: column; }
+      header .grid .single3 .image {
+        position: relative;
+        height: 100%; }
+        header .grid .single3 .image img {
+          width: 100%;
+          max-height: 100%;
+          object-fit: cover; }
+      header .grid .single3 .text {
+        flex-basis: 0%;
+        position: relative;
+        flex-basis: contents;
+        height: 100%; }
+        header .grid .single3 .text .category {
+          position: absolute;
+          top: -1rem; }
+    header .grid .single4 {
+      grid-area: single4;
+      display: flex;
+      flex-direction: column; }
+      header .grid .single4 .image {
+        position: relative;
+        height: 100%; }
+        header .grid .single4 .image img {
+          width: 100%;
+          max-height: 100%;
+          object-fit: cover; }
+      header .grid .single4 .text {
+        flex-basis: 0%;
+        position: relative;
+        flex-basis: contents;
+        height: 100%; }
+        header .grid .single4 .text .category {
+          position: absolute;
+          top: -1rem; }
+    header .grid .single5 {
+      grid-area: single5;
+      display: flex;
+      flex-direction: column; }
+      header .grid .single5 .image {
+        position: relative;
+        height: 100%; }
+        header .grid .single5 .image img {
+          width: 100%;
+          max-height: 100%;
+          object-fit: cover; }
+      header .grid .single5 .text {
+        flex-basis: 0%;
+        position: relative;
+        flex-basis: contents;
+        height: 100%; }
+        header .grid .single5 .text .category {
+          position: absolute;
+          top: -1rem; }
+
+.category {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block; }
+
+.text {
+  padding: 1rem; }
+
+.red {
+  background: red; }
+
+.grey {
+  background: grey; }
+
+.purple {
+  background: purple; }
+
+.card-title-l {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem; }
+
+.card-title {
+  font-size: 1.25rem;
+  text-transform: initial;
+  color: black;
+  margin-bottom: 0.5rem; }
+
+p {
+  font-size: 0.9rem; }
+
+.byAuthor {
+  color: #d9264f;
+  font-size: 0.75rem; }
+  .byAuthor #by {
+    color: grey; }
+
 footer {
   background: darkslategray;
   width: 100%;
@@ -330,7 +512,3 @@ footer {
     margin: 0; }
     nav .container .navigation .links {
       display: none; } }
-
-header {
-  height: 100vh;
-  width: 100vw; }

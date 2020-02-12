@@ -1,0 +1,233 @@
+header {
+  height: 100vh;
+  width: 100%;
+
+  .grid {
+    padding: 1rem 0;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-gap: 0.25rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-areas:
+      "main main main single1"
+      "single2 secondary1 secondary1 single3"
+      "secondary2 secondary2 single4 single5";
+
+    .main,
+    .secondary1,
+    .secondary2 {
+      position: relative;
+      max-height: 100%;
+      max-width: 100%;
+      img {
+        position: absolute;
+        z-index: 0;
+        width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        filter: brightness(50%);
+      }
+      .text {
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+      }
+    }
+    .main {
+      grid-area: main;
+      max-height: 100%;
+      .image {
+        height: 100%;
+        position: relative;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .secondary1 {
+      grid-area: secondary1;
+    }
+
+    .secondary2 {
+      grid-area: secondary2;
+    }
+
+    .single1 {
+      grid-area: single1;
+      display: flex;
+      flex-direction: column;
+      .image {
+        position: relative;
+        height: 100%;
+        img {
+          width: 100%;
+          max-height: 100%;
+          object-fit: cover;
+        }
+      }
+      .text {
+        flex-basis: 0%;
+        position: relative;
+        .category {
+          position: absolute;
+          top: -1rem;
+        }
+        flex-basis: contents;
+        height: 100%;
+      }
+    }
+
+    .single2 {
+      grid-area: single2;
+      display: flex;
+      flex-direction: column;
+      .image {
+        flex-basis: 1;
+        position: relative;
+        height: 100%;
+        img {
+          width: 100%;
+          max-height: 100%;
+          object-fit: cover;
+        }
+      }
+      .text {
+        flex-basis: 0;
+        position: relative;
+        .category {
+          position: absolute;
+          top: -1rem;
+        }
+        flex-basis: 1;
+        height: 100%;
+        // background: blue;
+      }
+    }
+
+    .single3 {
+      grid-area: single3;
+      display: flex;
+      flex-direction: column;
+      .image {
+        position: relative;
+        height: 100%;
+        img {
+          width: 100%;
+          max-height: 100%;
+          object-fit: cover;
+        }
+      }
+      .text {
+        flex-basis: 0%;
+        position: relative;
+        .category {
+          position: absolute;
+          top: -1rem;
+        }
+        flex-basis: contents;
+        height: 100%;
+      }
+    }
+
+    .single4 {
+      grid-area: single4;
+      display: flex;
+      flex-direction: column;
+      .image {
+        position: relative;
+        height: 100%;
+        img {
+          width: 100%;
+          max-height: 100%;
+          object-fit: cover;
+        }
+      }
+      .text {
+        flex-basis: 0%;
+        position: relative;
+        .category {
+          position: absolute;
+          top: -1rem;
+        }
+        flex-basis: contents;
+        height: 100%;
+      }
+    }
+
+    .single5 {
+      grid-area: single5;
+      display: flex;
+      flex-direction: column;
+      .image {
+        position: relative;
+        height: 100%;
+        img {
+          width: 100%;
+          max-height: 100%;
+          object-fit: cover;
+        }
+      }
+      .text {
+        flex-basis: 0%;
+        position: relative;
+        .category {
+          position: absolute;
+          top: -1rem;
+        }
+        flex-basis: contents;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.category {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.text {
+  padding: 1rem;
+}
+
+.red {
+  background: red;
+}
+.grey {
+  background: grey;
+}
+.purple {
+  background: purple;
+}
+
+.card-title-l {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  text-transform: initial;
+  color: black;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 0.9rem;
+}
+
+.byAuthor {
+  #by {
+    color: grey;
+  }
+  color: $main-light;
+  font-size: 0.75rem;
+}

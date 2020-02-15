@@ -9,12 +9,6 @@ header {
     width: 100%;
     display: grid;
     grid-gap: 0.25rem;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
-    grid-template-areas:
-      "main main main single1"
-      "single2 secondary1 secondary1 single3"
-      "secondary2 secondary2 single4 single5";
 
     .fullCard {
       position: relative;
@@ -57,6 +51,31 @@ header {
         .category {
           position: absolute;
           top: -1rem;
+        }
+        flex-basis: contents;
+        height: 100%;
+      }
+    }
+    .rowCard {
+      display: flex;
+      flex-direction: row;
+      .image {
+        position: relative;
+        height: 100%;
+
+        img {
+          width: 35vw;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .text {
+        // flex-basis: 0%;
+        position: relative;
+        padding-top: 0;
+        .category {
+          position: relative;
+          top: 0rem;
         }
         flex-basis: contents;
         height: 100%;
@@ -141,4 +160,50 @@ p {
   }
   color: $main-light;
   font-size: 0.75rem;
+}
+
+.grid-xl {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-areas:
+    "main main main single1"
+    "single2 secondary1 secondary1 single3"
+    "secondary2 secondary2 single4 single5";
+}
+.grid-l {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: minmax(0, 1.25fr) minmax(0, 1fr) minmax(0, 1.25fr) minmax(
+      0,
+      1fr
+    );
+  grid-template-areas:
+    "main main main"
+    "single1 single2 secondary1"
+    "secondary2 secondary2 secondary2"
+    "single3 single4 single5";
+}
+.grid-m {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows:
+    minmax(0, 1.25fr) minmax(0, 1fr) minmax(0, 1.25fr) minmax(0, 1fr)
+    minmax(0, 1fr);
+  grid-template-areas:
+    "main main"
+    "single1 single2"
+    "secondary1 secondary1"
+    "secondary2 single3"
+    "single4 single5";
+}
+.grid-s {
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(8, minmax(0, 1fr));
+  grid-template-areas:
+    "main"
+    "single1"
+    "single2"
+    "secondary1"
+    "single3"
+    "secondary2"
+    "single4"
+    "single5";
 }

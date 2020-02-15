@@ -233,10 +233,7 @@ header {
     height: 100%;
     width: 100%;
     display: grid;
-    grid-gap: 0.25rem;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
-    grid-template-areas: "main main main single1" "single2 secondary1 secondary1 single3" "secondary2 secondary2 single4 single5"; }
+    grid-gap: 0.25rem; }
     header .grid .fullCard {
       position: relative;
       max-height: 100%;
@@ -273,6 +270,24 @@ header {
         header .grid .halfCard .text .category {
           position: absolute;
           top: -1rem; }
+    header .grid .rowCard {
+      display: flex;
+      flex-direction: row; }
+      header .grid .rowCard .image {
+        position: relative;
+        height: 100%; }
+        header .grid .rowCard .image img {
+          width: 35vw;
+          height: 100%;
+          object-fit: cover; }
+      header .grid .rowCard .text {
+        position: relative;
+        padding-top: 0;
+        flex-basis: contents;
+        height: 100%; }
+        header .grid .rowCard .text .category {
+          position: relative;
+          top: 0rem; }
     header .grid #card1 {
       grid-area: main; }
     header .grid #card2 {
@@ -328,6 +343,26 @@ p {
   .byAuthor #by {
     color: grey; }
 
+.grid-xl {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-areas: "main main main single1" "single2 secondary1 secondary1 single3" "secondary2 secondary2 single4 single5"; }
+
+.grid-l {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: minmax(0, 1.25fr) minmax(0, 1fr) minmax(0, 1.25fr) minmax(0, 1fr);
+  grid-template-areas: "main main main" "single1 single2 secondary1" "secondary2 secondary2 secondary2" "single3 single4 single5"; }
+
+.grid-m {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: minmax(0, 1.25fr) minmax(0, 1fr) minmax(0, 1.25fr) minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-areas: "main main" "single1 single2" "secondary1 secondary1" "secondary2 single3" "single4 single5"; }
+
+.grid-s {
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(8, minmax(0, 1fr));
+  grid-template-areas: "main" "single1" "single2" "secondary1" "single3" "secondary2" "single4" "single5"; }
+
 footer {
   background: darkslategray;
   width: 100%;
@@ -350,221 +385,3 @@ footer {
 @media (max-width: 1500px) {
   nav .container .right-icons .social {
     display: none; } }
-
-@media (max-width: 1200px) {
-  #podcasts,
-  #videos,
-  #esports,
-  #shopping,
-  #guides {
-    display: none; }
-  #more,
-  #hamburgerVideos,
-  #hamburgerEsports,
-  #hamburgerShopping,
-  #hamburgerGuides {
-    display: inline-block; }
-  nav .searchBar .wrapper input {
-    width: 500px; }
-  header {
-    height: 200vh;
-    width: 100%; }
-    header .grid {
-      padding: 1rem 0;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: minmax(0, 1.25fr) minmax(0, 1fr) minmax(0, 1.25fr) minmax(0, 1fr);
-      grid-template-areas: "main main main" "single1 single2 secondary1" "secondary2 secondary2 secondary2" "single3 single4 single5"; }
-      header .grid #card2 {
-        display: flex;
-        flex-direction: column; }
-        header .grid #card2 .image {
-          position: relative;
-          height: 100%; }
-          header .grid #card2 .image img {
-            width: 100%;
-            max-height: 100%;
-            object-fit: cover; }
-        header .grid #card2 .text {
-          flex-basis: 0%;
-          position: relative;
-          flex-basis: contents;
-          height: 100%; }
-          header .grid #card2 .text .category {
-            position: absolute;
-            top: -1rem; }
-          header .grid #card2 .text .card-title-l {
-            font-size: 1.25rem;
-            text-transform: initial;
-            color: black;
-            margin-bottom: 0.5rem; } }
-
-@media (max-width: 850px) {
-  #podcasts,
-  #videos,
-  #esports,
-  #shopping,
-  #guides,
-  #features,
-  #reviews {
-    display: none; }
-  #more,
-  #hamburgerVideos,
-  #hamburgerEsports,
-  #hamburgerShopping,
-  #hamburgerGuides,
-  #hamburgerFeatures,
-  #hamburgerReviews {
-    display: inline-block; } }
-
-@media (max-width: 768px) {
-  header {
-    height: 200vh;
-    width: 100%; }
-    header .grid {
-      padding: 1rem 0;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: minmax(0, 1.25fr) minmax(0, 1fr) minmax(0, 1.25fr) minmax(0, 1fr) minmax(0, 1fr);
-      grid-template-areas: "main main" "single1 single2" "secondary1 secondary1" "secondary2 single3" "single4 single5"; }
-      header .grid #card2 {
-        position: relative;
-        max-height: 100%;
-        max-width: 100%; }
-        header .grid #card2 .image {
-          height: 100%;
-          position: relative; }
-          header .grid #card2 .image img {
-            position: absolute;
-            z-index: 0;
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            filter: brightness(50%); }
-        header .grid #card2 .text {
-          position: absolute;
-          z-index: 1;
-          bottom: 0;
-          font-size: 2rem;
-          height: auto; }
-          header .grid #card2 .text .card-title-l {
-            font-size: 2rem;
-            text-transform: uppercase;
-            margin-bottom: 0.5rem;
-            color: white; }
-      header .grid #card3 {
-        display: flex;
-        flex-direction: column; }
-        header .grid #card3 .image {
-          position: relative;
-          height: 100%; }
-          header .grid #card3 .image img {
-            width: 100%;
-            max-height: 100%;
-            object-fit: cover; }
-        header .grid #card3 .text {
-          flex-basis: 0%;
-          position: relative;
-          flex-basis: contents;
-          height: 100%; }
-          header .grid #card3 .text .category {
-            position: absolute;
-            top: -1rem; }
-          header .grid #card3 .text .card-title-l {
-            font-size: 1.25rem;
-            text-transform: initial;
-            color: black;
-            margin-bottom: 0.5rem; } }
-
-@media (max-width: 700px) {
-  #podcasts,
-  #videos,
-  #esports,
-  #shopping,
-  #guides,
-  #features,
-  #reviews,
-  nav .container .function .search #searchIcon {
-    display: none; }
-  #more,
-  #hamburgerVideos,
-  #hamburgerEsports,
-  #hamburgerShopping,
-  #hamburgerGuides,
-  #hamburgerFeatures,
-  #hamburgerReviews {
-    display: inline-block; } }
-
-@media (max-width: 630px) {
-  header .grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(8, minmax(0, 1fr));
-    grid-template-areas: "main" "single1" "single2" "secondary1" "single3" "secondary2" "single4" "single5"; }
-    header .grid #card1 .text .card-title-l,
-    header .grid #card2 .text .card-title-l,
-    header .grid #card3 .text .card-title-l,
-    header .grid #card4 .text .card-title-l,
-    header .grid #card5 .text .card-title-l,
-    header .grid #card6 .text .card-title-l,
-    header .grid #card7 .text .card-title-l,
-    header .grid #card8 .text .card-title-l {
-      font-size: 1.25rem; }
-    header .grid #card1 .text .card-title,
-    header .grid #card2 .text .card-title,
-    header .grid #card3 .text .card-title,
-    header .grid #card4 .text .card-title,
-    header .grid #card5 .text .card-title,
-    header .grid #card6 .text .card-title,
-    header .grid #card7 .text .card-title,
-    header .grid #card8 .text .card-title {
-      font-size: 1.25rem; }
-  #card1 {
-    display: flex;
-    flex-direction: row; }
-    #card1 .image {
-      flex-basis: 1;
-      position: relative;
-      height: 100%;
-      width: 100%; }
-      #card1 .image img {
-        width: 100%;
-        max-height: 100%;
-        object-fit: cover; }
-    #card1 .text {
-      flex-basis: 8;
-      position: relative;
-      flex-basis: contents;
-      height: 100%;
-      color: black; }
-      #card1 .text .category {
-        position: absolute;
-        top: -1rem; } }
-
-@media (max-width: 600px) {
-  nav .container .navigation .links .dropdown:hover .dropdown-content .drop-categories {
-    grid-template-columns: 1fr;
-    width: 100%;
-    grid-auto-flow: row; } }
-
-@media (max-width: 500px) {
-  nav .mobile-nav {
-    display: flex; }
-    nav .mobile-nav .dropdown-content {
-      left: 0;
-      width: 100vw;
-      height: 100vh; }
-      nav .mobile-nav .dropdown-content .drop-categories {
-        grid-template-columns: 1fr !important;
-        grid-auto-flow: row; }
-      nav .mobile-nav .dropdown-content .drop-all {
-        padding-top: 0.25rem; }
-  nav .container .navigation {
-    margin: 0; }
-    nav .container .navigation .links {
-      display: none; } }
-
-@media (max-width: 370px) {
-  nav .mobile-nav {
-    display: flex; }
-  nav .container .navigation {
-    margin: 0; }
-    nav .container .navigation .links {
-      display: none; } }

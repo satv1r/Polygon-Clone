@@ -135,9 +135,15 @@ const setXL = xl => {
     for (var i = 0; i < allCards.length; i++) {
       allCards[i].classList.remove("rowCard");
     }
+    makeFullCard(card1);
+    makeFullCard(card4);
+    makeFullCard(card6);
+    makeHalfCard(card2);
+    makeHalfCard(card3);
+    makeHalfCard(card5);
+    makeHalfCard(card7);
+    makeHalfCard(card8);
     header.style.height = "125vh";
-    makeFullCard(card2);
-    makeHalfCard(card4);
     grid.classList.remove("grid-l", "grid-m", "grid-s");
     grid.classList.add("grid-xl");
   }
@@ -148,7 +154,15 @@ const setL = l => {
       allCards[i].classList.remove("rowCard");
     }
     header.style.height = "200vh";
+    makeFullCard(card1);
+    makeFullCard(card5);
     makeHalfCard(card2);
+    makeHalfCard(card3);
+    makeHalfCard(card4);
+    makeHalfCard(card6);
+    makeHalfCard(card7);
+    makeHalfCard(card8);
+
     grid.classList.remove("grid-xl", "grid-m", "grid-s");
     grid.classList.add("grid-l");
   }
@@ -158,6 +172,14 @@ const setM = m => {
     for (var i = 0; i < allCards.length; i++) {
       allCards[i].classList.remove("rowCard");
     }
+    makeFullCard(card1);
+    makeFullCard(card4);
+    makeHalfCard(card2);
+    makeHalfCard(card3);
+    makeHalfCard(card5);
+    makeHalfCard(card6);
+    makeHalfCard(card7);
+    makeHalfCard(card8);
     header.style.height = "200vh";
     grid.classList.remove("grid-xl", "grid-l", "grid-s");
     grid.classList.add("grid-m");

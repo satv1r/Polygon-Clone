@@ -73,6 +73,9 @@ header {
         // flex-basis: 0%;
         position: relative;
         padding-top: 0;
+        .card-title {
+          font-size: 1rem;
+        }
         .category {
           position: relative;
           top: 0rem;
@@ -83,35 +86,35 @@ header {
     }
 
     #card1 {
-      grid-area: main;
+      grid-area: card1;
     }
 
     #card2 {
-      grid-area: secondary1;
+      grid-area: card2;
     }
 
     #card3 {
-      grid-area: secondary2;
+      grid-area: card3;
     }
 
     #card4 {
-      grid-area: single1;
+      grid-area: card4;
     }
 
     #card5 {
-      grid-area: single2;
+      grid-area: card5;
     }
 
     #card6 {
-      grid-area: single3;
+      grid-area: card6;
     }
 
     #card7 {
-      grid-area: single4;
+      grid-area: card7;
     }
 
     #card8 {
-      grid-area: single5;
+      grid-area: card8;
     }
   }
 }
@@ -166,9 +169,9 @@ p {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
   grid-template-areas:
-    "main main main single1"
-    "single2 secondary1 secondary1 single3"
-    "secondary2 secondary2 single4 single5";
+    "card1 card1 card1 card2"
+    "card3 card4 card4 card5"
+    "card6 card6 card7 card8";
 }
 .grid-l {
   grid-template-columns: 1fr 1fr 1fr;
@@ -177,10 +180,10 @@ p {
       1fr
     );
   grid-template-areas:
-    "main main main"
-    "single1 single2 secondary1"
-    "secondary2 secondary2 secondary2"
-    "single3 single4 single5";
+    "card1 card1 card1"
+    "card2 card3 card4"
+    "card5 card5 card5"
+    "card6 card7 card8";
 }
 .grid-m {
   grid-template-columns: 1fr 1fr;
@@ -188,22 +191,22 @@ p {
     minmax(0, 1.25fr) minmax(0, 1fr) minmax(0, 1.25fr) minmax(0, 1fr)
     minmax(0, 1fr);
   grid-template-areas:
-    "main main"
-    "single1 single2"
-    "secondary1 secondary1"
-    "secondary2 single3"
-    "single4 single5";
+    "card1 card1"
+    "card2 card3"
+    "card4 card4"
+    "card5 card6"
+    "card7 card8";
 }
 .grid-s {
   grid-template-columns: 1fr;
   grid-template-rows: repeat(8, minmax(0, 1fr));
   grid-template-areas:
-    "main"
-    "single1"
-    "single2"
-    "secondary1"
-    "single3"
-    "secondary2"
-    "single4"
-    "single5";
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6"
+    "card7"
+    "card8";
 }

@@ -387,3 +387,87 @@ footer {
 @media (max-width: 1500px) {
   nav .container .right-icons .social {
     display: none; } }
+
+@media (max-width: 1200px) {
+  #podcasts,
+  #videos,
+  #esports,
+  #shopping,
+  #guides {
+    display: none; }
+  #more,
+  #hamburgerVideos,
+  #hamburgerEsports,
+  #hamburgerShopping,
+  #hamburgerGuides {
+    display: inline-block; }
+  nav .searchBar .wrapper input {
+    width: 500px; } }
+
+@media (max-width: 850px) {
+  #podcasts,
+  #videos,
+  #esports,
+  #shopping,
+  #guides,
+  #features,
+  #reviews {
+    display: none; }
+  #more,
+  #hamburgerVideos,
+  #hamburgerEsports,
+  #hamburgerShopping,
+  #hamburgerGuides,
+  #hamburgerFeatures,
+  #hamburgerReviews {
+    display: inline-block; } }
+
+@media (max-width: 700px) {
+  #podcasts,
+  #videos,
+  #esports,
+  #shopping,
+  #guides,
+  #features,
+  #reviews,
+  nav .container .function .search #searchIcon {
+    display: none; }
+  #more,
+  #hamburgerVideos,
+  #hamburgerEsports,
+  #hamburgerShopping,
+  #hamburgerGuides,
+  #hamburgerFeatures,
+  #hamburgerReviews {
+    display: inline-block; } }
+
+@media (max-width: 600px) {
+  nav .container .navigation .links .dropdown:hover .dropdown-content .drop-categories {
+    grid-template-columns: 1fr;
+    width: 100%;
+    grid-auto-flow: row; } }
+
+@media (max-width: 500px) {
+  nav .mobile-nav {
+    display: flex; }
+    nav .mobile-nav .dropdown-content {
+      left: 0;
+      width: 100vw;
+      height: 100vh; }
+      nav .mobile-nav .dropdown-content .drop-categories {
+        grid-template-columns: 1fr !important;
+        grid-auto-flow: row; }
+      nav .mobile-nav .dropdown-content .drop-all {
+        padding-top: 0.25rem; }
+  nav .container .navigation {
+    margin: 0; }
+    nav .container .navigation .links {
+      display: none; } }
+
+@media (max-width: 370px) {
+  nav .mobile-nav {
+    display: flex; }
+  nav .container .navigation {
+    margin: 0; }
+    nav .container .navigation .links {
+      display: none; } }

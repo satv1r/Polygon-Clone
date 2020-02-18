@@ -122,6 +122,15 @@
     display: flex;
   }
 
+  nav .mobile-nav #mEntertainment {
+    display: none;
+  }
+
+  nav .mobile-nav .dropdown #seEntertainment,
+  nav .mobile-nav .dropdown #seHR {
+    display: block;
+  }
+
   nav .container .navigation {
     margin: 0;
     .links {

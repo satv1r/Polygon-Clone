@@ -11,8 +11,10 @@ header {
     grid-gap: 0.25rem;
 
     .card {
+      overflow: hidden;
       .image {
-        filter: brightness(75%);
+        overflow: hidden;
+        // filter: brightness(75%);
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -92,6 +94,7 @@ header {
         position: relative;
         height: calc(35vw * 0.66);
         min-width: 35vw;
+        filter: brightness(100%);
       }
       .text {
         position: relative;
@@ -120,6 +123,18 @@ header {
       grid-area: card1;
       .image {
         background-image: url("https://source.unsplash.com/random/1000x400");
+        &:after {
+          content: "";
+          position: absolute;
+          display: block;
+          width: 50px;
+          height: 50px;
+          background: #fff;
+          filter: brightness(100%);
+          transform: rotate(45deg);
+          top: -25px;
+          right: -25px;
+        }
       }
     }
 
@@ -223,11 +238,15 @@ p {
 
 .grid-xl {
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1fr);
   grid-template-areas:
     "card1 card1 card1 card2"
     "card3 card4 card4 card5"
     "card6 card6 card7 card8";
+  #card2 {
+    height: calc(100% - 35px);
+    padding-top: 35px;
+  }
 }
 .grid-l {
   grid-template-columns: 1fr 1fr 1fr;
@@ -265,4 +284,9 @@ p {
     "card6"
     "card7"
     "card8";
+  #card1 {
+    .image {
+      min-width: 45vw;
+    }
+  }
 }

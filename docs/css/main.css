@@ -191,6 +191,9 @@ nav {
     nav .mobile-nav .dropdown {
       display: inline-block;
       position: relative; }
+      nav .mobile-nav .dropdown #seEntertainment,
+      nav .mobile-nav .dropdown #seHR {
+        display: none; }
       nav .mobile-nav .dropdown .dropdown-content {
         padding: 0.25rem 0;
         display: none;
@@ -234,11 +237,13 @@ header {
     width: 100%;
     display: grid;
     grid-gap: 0.25rem; }
-    header .grid .card .image {
-      filter: brightness(75%);
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: cover; }
+    header .grid .card {
+      overflow: hidden; }
+      header .grid .card .image {
+        overflow: hidden;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover; }
     header .grid .fullCard {
       position: relative;
       max-height: 100%;
@@ -294,7 +299,8 @@ header {
       header .grid .rowCard .image {
         position: relative;
         height: calc(35vw * 0.66);
-        min-width: 35vw; }
+        min-width: 35vw;
+        filter: brightness(100%); }
       header .grid .rowCard .text {
         position: relative;
         padding-top: 0;
@@ -314,6 +320,17 @@ header {
       grid-area: card1; }
       header .grid #card1 .image {
         background-image: url("https://source.unsplash.com/random/1000x400"); }
+        header .grid #card1 .image:after {
+          content: "";
+          position: absolute;
+          display: block;
+          width: 50px;
+          height: 50px;
+          background: #fff;
+          filter: brightness(100%);
+          transform: rotate(45deg);
+          top: -25px;
+          right: -25px; }
     header .grid #card2 {
       grid-area: card2; }
       header .grid #card2 .image {
@@ -384,8 +401,11 @@ p {
 
 .grid-xl {
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1fr);
   grid-template-areas: "card1 card1 card1 card2" "card3 card4 card4 card5" "card6 card6 card7 card8"; }
+  .grid-xl #card2 {
+    height: calc(100% - 35px);
+    padding-top: 35px; }
 
 .grid-l {
   grid-template-columns: 1fr 1fr 1fr;
@@ -401,6 +421,8 @@ p {
   grid-template-columns: 1fr;
   grid-template-rows: repeat(8, minmax(1fr, 1.5fr));
   grid-template-areas: "card1" "card2" "card3" "card4" "card5" "card6" "card7" "card8"; }
+  .grid-s #card1 .image {
+    min-width: 45vw; }
 
 footer {
   background: darkslategray;
@@ -504,6 +526,11 @@ footer {
 @media (max-width: 370px) {
   nav .mobile-nav {
     display: flex; }
+  nav .mobile-nav #mEntertainment {
+    display: none; }
+  nav .mobile-nav .dropdown #seEntertainment,
+  nav .mobile-nav .dropdown #seHR {
+    display: block; }
   nav .container .navigation {
     margin: 0; }
     nav .container .navigation .links {

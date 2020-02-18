@@ -244,6 +244,11 @@ nav {
       display: inline-block;
       position: relative;
 
+      #seEntertainment,
+      #seHR {
+        display: none;
+      }
+
       .dropdown-content {
         padding: 0.25rem 0;
         display: none;

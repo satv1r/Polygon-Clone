@@ -187,7 +187,7 @@ const setM = m => {
 };
 const setS = s => {
   if (s.matches) {
-    header.style.height = "1100px";
+    header.style.height = "1320px";
     grid.classList.remove("grid-xl", "grid-l", "grid-m");
     grid.classList.add("grid-s");
     for (var i = 0; i < allCards.length; i++) {

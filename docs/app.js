@@ -154,6 +154,7 @@ const setL = l => {
       allCards[i].classList.remove("rowCard");
     }
     header.style.height = "200vh";
+    header.style.minHeight = "1400px";
     makeFullCard(card1);
     makeFullCard(card5);
     makeHalfCard(card2);
@@ -181,6 +182,7 @@ const setM = m => {
     makeHalfCard(card7);
     makeHalfCard(card8);
     header.style.height = "200vh";
+    header.style.minHeight = "1400px";
     grid.classList.remove("grid-xl", "grid-l", "grid-s");
     grid.classList.add("grid-m");
   }

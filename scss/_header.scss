@@ -10,6 +10,12 @@ header {
     display: grid;
     grid-gap: 0.25rem;
 
+    .card {
+      .image {
+        filter: brightness(75%);
+      }
+    }
+
     .fullCard {
       position: relative;
       max-height: 100%;
@@ -77,9 +83,11 @@ header {
     .rowCard {
       display: flex;
       flex-direction: row;
+      padding-top: 0.75rem;
+      border-bottom: 1px solid lightgray;
       .image {
         position: relative;
-        height: 100%;
+        height: calc(35vw * 0.66);
         min-width: 35vw;
       }
       .text {
@@ -244,7 +252,7 @@ p {
 }
 .grid-s {
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(8, minmax(0, 1fr));
+  grid-template-rows: repeat(8, minmax(1fr, 1.5fr));
   grid-template-areas:
     "card1"
     "card2"

@@ -252,66 +252,96 @@ header {
         position: absolute;
         z-index: 1;
         bottom: 0; }
+        header .grid .fullCard .text .byAuthor {
+          color: white;
+          font-size: 0.85rem; }
+          header .grid .fullCard .text .byAuthor span {
+            color: white; }
     header .grid .halfCard {
       display: flex;
-      flex-direction: column; }
+      flex-direction: column;
+      height: 100%; }
       header .grid .halfCard .image {
         position: relative;
         height: 100%; }
         header .grid .halfCard .image img {
           width: 100%;
-          max-height: 100%;
+          height: 100%;
           object-fit: cover; }
       header .grid .halfCard .text {
-        flex-basis: 0%;
+        flex: 1 1 auto;
+        flex-basis: 0;
         position: relative;
-        flex-basis: contents;
-        height: 100%; }
+        flex-basis: contents; }
         header .grid .halfCard .text .category {
           position: absolute;
           top: -1rem; }
+        header .grid .halfCard .text .byAuthor {
+          color: #d9264f;
+          font-size: 0.75rem; }
+          header .grid .halfCard .text .byAuthor span {
+            color: grey; }
     header .grid .rowCard {
       display: flex;
       flex-direction: row; }
       header .grid .rowCard .image {
         position: relative;
-        height: 100%; }
-        header .grid .rowCard .image img {
-          width: 35vw;
-          height: 100%;
-          object-fit: cover; }
+        height: 100%;
+        min-width: 35vw; }
       header .grid .rowCard .text {
         position: relative;
         padding-top: 0;
-        flex-basis: contents;
+        width: 100%;
         height: 100%; }
         header .grid .rowCard .text .card-title {
           font-size: 1rem; }
         header .grid .rowCard .text .category {
           position: relative;
           top: 0rem; }
+        header .grid .rowCard .text .byAuthor {
+          color: #d9264f;
+          font-size: 0.75rem; }
+          header .grid .rowCard .text .byAuthor span {
+            color: grey; }
     header .grid #card1 {
       grid-area: card1; }
+      header .grid #card1 .image {
+        background-image: url("https://source.unsplash.com/random/1000x400"); }
     header .grid #card2 {
       grid-area: card2; }
+      header .grid #card2 .image {
+        background: url("https://source.unsplash.com/random/1200x1400"); }
     header .grid #card3 {
       grid-area: card3; }
+      header .grid #card3 .image {
+        background: url("https://source.unsplash.com/random/1200x1400"); }
     header .grid #card4 {
       grid-area: card4; }
+      header .grid #card4 .image {
+        background: url("https://source.unsplash.com/random/1200x1400"); }
     header .grid #card5 {
       grid-area: card5; }
+      header .grid #card5 .image {
+        background: url("https://source.unsplash.com/random/1200x1400"); }
     header .grid #card6 {
       grid-area: card6; }
+      header .grid #card6 .image {
+        background: url("https://source.unsplash.com/random/1200x1400"); }
     header .grid #card7 {
       grid-area: card7; }
+      header .grid #card7 .image {
+        background: url("https://source.unsplash.com/random/1200x1400"); }
     header .grid #card8 {
       grid-area: card8; }
+      header .grid #card8 .image {
+        background: url("https://source.unsplash.com/random/1200x1400"); }
 
 .category {
   font-size: 0.75rem;
   padding: 0.25rem 0.5rem;
   margin-bottom: 0.5rem;
-  display: inline-block; }
+  display: inline-block;
+  text-transform: uppercase; }
 
 .text {
   padding: 1rem; }
@@ -441,13 +471,13 @@ footer {
   #hamburgerReviews {
     display: inline-block; } }
 
-@media (max-width: 600px) {
+@media (max-width: 699px) {
   nav .container .navigation .links .dropdown:hover .dropdown-content .drop-categories {
     grid-template-columns: 1fr;
     width: 100%;
     grid-auto-flow: row; } }
 
-@media (max-width: 500px) {
+@media (max-width: 630px) {
   nav .mobile-nav {
     display: flex; }
     nav .mobile-nav .dropdown-content {

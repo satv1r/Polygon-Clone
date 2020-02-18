@@ -31,29 +31,47 @@ header {
         position: absolute;
         z-index: 1;
         bottom: 0;
+
+        .byAuthor {
+          span {
+            color: white;
+          }
+          color: white;
+          font-size: 0.85rem;
+        }
       }
     }
     .halfCard {
       display: flex;
       flex-direction: column;
+      height: 100%;
       .image {
         position: relative;
         height: 100%;
+
         img {
           width: 100%;
-          max-height: 100%;
+          height: 100%;
           object-fit: cover;
         }
       }
       .text {
-        flex-basis: 0%;
+        flex: 1 1 auto;
+        flex-basis: 0;
         position: relative;
         .category {
           position: absolute;
           top: -1rem;
         }
         flex-basis: contents;
-        height: 100%;
+        // height: 100%;
+        .byAuthor {
+          span {
+            color: grey;
+          }
+          color: $main-light;
+          font-size: 0.75rem;
+        }
       }
     }
     .rowCard {
@@ -62,15 +80,9 @@ header {
       .image {
         position: relative;
         height: 100%;
-
-        img {
-          width: 35vw;
-          height: 100%;
-          object-fit: cover;
-        }
+        min-width: 35vw;
       }
       .text {
-        // flex-basis: 0%;
         position: relative;
         padding-top: 0;
         .card-title {
@@ -80,41 +92,73 @@ header {
           position: relative;
           top: 0rem;
         }
-        flex-basis: contents;
+        width: 100%;
+
         height: 100%;
+        .byAuthor {
+          span {
+            color: grey;
+          }
+          color: $main-light;
+          font-size: 0.75rem;
+        }
       }
     }
 
     #card1 {
       grid-area: card1;
+      .image {
+        background-image: url("https://source.unsplash.com/random/1000x400");
+      }
     }
 
     #card2 {
       grid-area: card2;
+      .image {
+        background: url("https://source.unsplash.com/random/1200x1400");
+      }
     }
 
     #card3 {
       grid-area: card3;
+      .image {
+        background: url("https://source.unsplash.com/random/1200x1400");
+      }
     }
 
     #card4 {
       grid-area: card4;
+      .image {
+        background: url("https://source.unsplash.com/random/1200x1400");
+      }
     }
 
     #card5 {
       grid-area: card5;
+      .image {
+        background: url("https://source.unsplash.com/random/1200x1400");
+      }
     }
 
     #card6 {
       grid-area: card6;
+      .image {
+        background: url("https://source.unsplash.com/random/1200x1400");
+      }
     }
 
     #card7 {
       grid-area: card7;
+      .image {
+        background: url("https://source.unsplash.com/random/1200x1400");
+      }
     }
 
     #card8 {
       grid-area: card8;
+      .image {
+        background: url("https://source.unsplash.com/random/1200x1400");
+      }
     }
   }
 }
@@ -124,6 +168,7 @@ header {
   padding: 0.25rem 0.5rem;
   margin-bottom: 0.5rem;
   display: inline-block;
+  text-transform: uppercase;
 }
 
 .text {

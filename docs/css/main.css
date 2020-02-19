@@ -486,7 +486,7 @@ footer {
         footer .footer-container .links .bottom a:hover {
           color: gray; }
       footer .footer-container .links .top {
-        padding-bottom: 1rem; }
+        padding-bottom: 0.5rem; }
     footer .footer-container .vox a {
       text-decoration: none;
       color: white; }
@@ -529,7 +529,7 @@ footer {
       footer .footer-container .links,
       footer .footer-container .vox {
         text-align: center;
-        padding-bottom: 2rem; } }
+        padding-bottom: 1rem; } }
 
 @media (max-width: 850px) {
   #podcasts,

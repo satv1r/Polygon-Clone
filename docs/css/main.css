@@ -299,9 +299,8 @@ nav {
 header {
   height: 70vw;
   width: 100%;
-  padding: 0.25rem; }
+  padding: 0rem 0.25rem; }
   header .grid {
-    padding: 1rem 0;
     height: 100%;
     width: 100%;
     display: grid;

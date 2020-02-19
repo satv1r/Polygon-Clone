@@ -1,0 +1,60 @@
+#featured {
+  padding: 0rem 0 1rem 0;
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    // background: black;
+    height: 100%;
+
+    .grid {
+      padding: 0 0.25rem;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: 1fr;
+      grid-gap: 0.4rem;
+      grid-template-areas: "sCard1 sCard1 sCard1 sCard2 sCard2 sCard2 sCard3 sCard3";
+
+      .halfCard {
+        flex-direction: row;
+      }
+
+      .card {
+        height: 35vh;
+        .image {
+          // background-image: url("https://source.unsplash.com/random/1000x400");
+          overflow: hidden;
+          // filter: brightness(75%);
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+#sCard1 {
+  grid-area: sCard1;
+  .image {
+    background-image: url("https://source.unsplash.com/random/1000x401");
+  }
+}
+
+#sCard2 {
+  grid-area: sCard2;
+  .image {
+    background-image: url("https://source.unsplash.com/random/1020x401");
+  }
+}
+
+#sCard3 {
+  grid-area: sCard3;
+  .image {
+    background-image: url("https://source.unsplash.com/random/1030x401");
+
+    width: 100%;
+    filter: brightness(75%);
+  }
+}

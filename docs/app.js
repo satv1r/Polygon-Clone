@@ -77,7 +77,7 @@ searchIcon.addEventListener("click", e => {
 
 const grid = document.getElementById("grid");
 
-const allCards = document.getElementsByClassName("card");
+const allCards = document.getElementsByClassName("hCard");
 const card1 = document.getElementById("card1");
 const card2 = document.getElementById("card2");
 const card3 = document.getElementById("card3");

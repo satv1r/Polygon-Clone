@@ -27,3 +27,94 @@ body {
   align-items: center;
   margin: 0 auto;
 }
+
+.fullCard {
+  position: relative;
+  max-height: 100%;
+  max-width: 100%;
+  .image {
+    height: 100%;
+    position: relative;
+    filter: brightness(70%);
+  }
+
+  .text {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+
+    .byAuthor {
+      span {
+        color: white;
+      }
+      color: white;
+      font-size: 0.85rem;
+    }
+  }
+}
+.halfCard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  .image {
+    position: relative;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .text {
+    flex: 1 1 auto;
+    flex-basis: 0;
+    position: relative;
+    .category {
+      position: absolute;
+      top: -1rem;
+    }
+    flex-basis: contents;
+    // height: 100%;
+    .byAuthor {
+      span {
+        color: grey;
+      }
+      color: $main-light;
+      font-size: 0.75rem;
+    }
+  }
+}
+.rowCard {
+  display: flex;
+  flex-direction: row;
+  padding-top: 0.75rem;
+  border-bottom: 1px solid lightgray;
+  .image {
+    position: relative;
+    height: calc(35vw * 0.66);
+    min-width: 35vw;
+    filter: brightness(100%);
+  }
+  .text {
+    position: relative;
+    padding-top: 0;
+    .card-title {
+      font-size: 1rem;
+    }
+    .category {
+      position: relative;
+      top: 0rem;
+    }
+    width: 100%;
+
+    height: 100%;
+    .byAuthor {
+      span {
+        color: grey;
+      }
+      color: $main-light;
+      font-size: 0.75rem;
+    }
+  }
+}

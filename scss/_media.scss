@@ -37,6 +37,21 @@
   }
 }
 
+@media (max-width: 920px) {
+  footer {
+    height: 400px;
+    .footer-container {
+      flex-direction: column;
+      .fLogo,
+      .links,
+      .vox {
+        text-align: center;
+        padding-bottom: 2rem;
+      }
+    }
+  }
+}
+
 @media (max-width: 850px) {
   #podcasts,
   #videos,
@@ -56,6 +71,42 @@
   #hamburgerFeatures,
   #hamburgerReviews {
     display: inline-block;
+  }
+}
+
+@media (max-width: 768px) {
+  #featured {
+    .container {
+      .grid {
+        #sCard1,
+        #sCard2 {
+          height: 415px;
+          flex-direction: column;
+          .text {
+            .text-content {
+              .card-title {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+        #sCard3 {
+          height: 415px;
+          .text {
+            padding: 1 0.5rem;
+            .text-content {
+              .card-title-l {
+                text-align: center;
+                padding: 0;
+                font-size: 1rem;
+                letter-spacing: 1px;
+                font-weight: 800;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -84,6 +135,7 @@
 
 @media (max-width: 699px) {
   nav .container .navigation .links .dropdown:hover .dropdown-content {
+    z-index: 100;
     .drop-categories {
       grid-template-columns: 1fr;
       width: 100%;

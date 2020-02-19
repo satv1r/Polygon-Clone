@@ -487,6 +487,9 @@ footer {
           color: gray; }
       footer .footer-container .links .top {
         padding-bottom: 1rem; }
+    footer .footer-container .vox a {
+      text-decoration: none;
+      color: white; }
 
 @media (max-width: 1600px) {
   #podcasts,

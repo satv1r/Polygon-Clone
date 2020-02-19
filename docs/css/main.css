@@ -24,7 +24,7 @@ body {
   .fullCard .image {
     height: 100%;
     position: relative;
-    filter: brightness(70%); }
+    filter: brightness(100%); }
   .fullCard .text {
     position: absolute;
     z-index: 1;
@@ -299,7 +299,7 @@ nav {
 header {
   height: 70vw;
   width: 100%;
-  padding: 0rem 0.25rem; }
+  padding: 0rem 0.25rem 0.5rem 0.25rem; }
   header .grid {
     height: 100%;
     width: 100%;
